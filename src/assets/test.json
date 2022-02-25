@@ -1,0 +1,84 @@
+{
+  "version" : 0,
+  "title": "Ärztliche Behandlung",
+  "description": "Behandlung, durchgeführt von einem/r Dr. med.",
+  "sections": [
+    {
+      "id": 0,
+      "fields": [
+        {
+          "type": "upload",
+          "key": "fee",
+          "description": "Honorarnote",
+          "order": 0
+        },
+        {
+          "type": "singleSelect",
+          "key": "treatment",
+          "description" : "Art der Behandlung",
+          "order": 1,
+          "fields": [
+            {
+              "type": "select",
+              "key": "conventional_medicine",
+              "description": "Schulmedizin",
+              "isSelected": true,
+              "order": 2
+            },
+            {
+              "type": "select",
+              "key": "alternative_medicine",
+              "description": "Alternativmedizin",
+              "isSelected": false,
+              "order": 3
+            }
+          ]
+        },
+        {
+          "type": "singleSelect",
+          "key": "social_seccurity",
+          "description" : "Sozialversicherung",
+          "order": 4,
+          "fields": [
+            {
+              "type": "select",
+              "key": "refund_received",
+              "description": "Erstattung erhalten",
+              "isSelected": false,
+              "order": 5
+            },
+            {
+              "type": "select",
+              "key": "deductible_payed",
+              "description": "Selbstbehalt bezahlt",
+              "isSelected": false,
+              "order": 6
+            },
+            {
+              "type": "select",
+              "key": "no_refund_received",
+              "description": "Keine Erstattung erhalten",
+              "isSelected": false,
+              "order": 7
+            }
+          ]
+
+        },
+        {
+          "type": "upload",
+          "key": "social_security",
+          "description" : "Abrechnung Sozialversicherung",
+          "order": 8,
+          "visible": false
+        },
+        {
+          "type": "text",
+          "inputType": "iban",
+          "key": "fee",
+          "description": "Honorarnote",
+          "order": 9
+        }
+      ]
+    }
+  ]
+}
